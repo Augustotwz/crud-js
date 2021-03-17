@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro de Funcionários</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Font Awesome -->
+   		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+   		<script src="script.js"></script>
+	</head>
+	<body onload="carregaListaFuncionarios()">
+		<div id="container">
+			<header>
+				<a class="logo" style="font-size: 38px;">
+	           		<i class="fas fa-address-book"></i>
+	        	</a>
+	        	<ul>
+	        		<li><a href="index.html">Cadastro</a></li>
+	        		<li><a class="active" href="#">Consulta</a></li>
+	        	</ul>
+			</header>
+
+			<!-- Área de pesquisa -->
+			<section id="section-container">
+				<div id="titulo">
+					<h1>Consulta de funcionários</h1>
+				</div>
+				<div id="section-pesquisa">
+					<div class="data-group">
+							<label for="nome">Nome:</label>
+							<input id="nome" type="text">
+
+							<label for="email">E-mail:</label>
+							<input id="email" type="email">
+
+							<label for="rg">RG:</label>
+							<input id="rg" type="text">
+						</div>
+						<div class="data-group">
+							<label for="cargo">Cargo:</label>
+							<input id="cargo" type="text">
+
+							<label for="salario">Salário:</label>
+							<input id="salario" type="email">
+
+							<button onclick="pesquisarFuncionario()">Pesquisar
+								<i class="fas fa-search"></i>
+							</button>
+						</div>							
+				</div>
+			</section>
+
+			<!-- Área da tabela -->
+			<section id="section-container" style="overflow-x:auto;">
+				<table id="table" >
+		        	<thead>
+		              <tr>
+		                <th>Nome</th>
+		                <th>Email</th>
+		                <th>Celular</th>
+		                <th>Rg</th>
+		                <th>CPF</th>
+		                <th>Cargo</th>
+		                <th>Salário</th>
+		                <th style="color: red;">Excluir</th>
+		              </tr>
+		            </thead>
+		            <tbody id="listaFuncionarios">
+		            </tbody>
+          		</table>
+			</section>
+
+		</div>
+	</body>
+</html>
